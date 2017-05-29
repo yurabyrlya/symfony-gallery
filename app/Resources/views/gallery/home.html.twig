@@ -1,0 +1,11 @@
+
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center"> Summer images </h1>
+    {% include ':gallery:category.html.twig' with {'images': randImages} %}
+
+    <h1 class="text-center"> Top images </h1>
+    {% include ':gallery:category.html.twig' with {'images': topImages} %}
+
+{% endblock %}

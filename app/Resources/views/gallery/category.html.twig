@@ -1,0 +1,17 @@
+
+<div class="row">
+    {% for image in images %}
+        <div class="
+       {%  if images|length == 1 %}
+            col-xs-12 col-md-12
+        {% elseif  images|length == 2 %}
+           col-xs-6 col-md-6
+        {% else %}
+            col-xs-6 col-md-4
+        {% endif %}">
+            <a href="{{ asset('images/'~ image) }}" class="thumbnail">
+                <img src="{{ asset('images/'~ image) }}" alt="{{ image }}">
+            </a>
+        </div>
+    {% endfor %}
+</div>

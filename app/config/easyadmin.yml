@@ -1,0 +1,10 @@
+easy_admin:
+    entities:
+        Gallery:
+            class: AppBundle\Entity\Gallery
+            list:
+                fields:
+                    - { property: 'fullName', type: 'image', base_path: '/images/' }
+                    - slug
+                    - width
+                    - height
